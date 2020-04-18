@@ -3,7 +3,7 @@ import {
   StyleSheet,
   Text,
   View,
-  Dimensions,
+  Image,
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
@@ -20,7 +20,11 @@ export default function Header({ navigation, title }) {
         onPress={openMenu}
         style={styles.icon}
       />
-      <View>
+      <View style={styles.headerTitle}>
+        <Image
+          source={require('../assets/heart_logo.png')}
+          style={styles.headerImage}
+        />
         <Text style={styles.headerText}>{title}</Text>
       </View>
     </View>
@@ -33,14 +37,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   headerText: {
-    fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 24,
     color: '#fff',
     letterSpacing: 2,
   },
   icon: {
-    position: 'absolute',
-    right: 220,
     color: '#fff',
+    marginRight: 12,
+  },
+  headerImage: {
+    width: 26,
+    height: 26,
+    marginHorizontal: 10,
+  },
+  headerTitle: {
+    flexDirection: 'row',
   },
 });

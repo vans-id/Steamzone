@@ -14,7 +14,7 @@ export default function HomeStack() {
         headerStyle: {
           backgroundColor: '#171A21',
         },
-        headerTitleAlign: 'center',
+        // headerTitleAlign: 'center',
         headerTintColor: '#fff',
       }}
     >

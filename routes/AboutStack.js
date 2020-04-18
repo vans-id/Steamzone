@@ -14,6 +14,7 @@ export default function AboutStack() {
           backgroundColor: '#171A21',
         },
         headerTintColor: '#fff',
+        // headerTitleAlign: 'center',
       }}
     >
       <Stack.Screen
