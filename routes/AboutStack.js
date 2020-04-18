@@ -1,42 +1,33 @@
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Home from '../screens/Home';
-import ReviewDetails from '../screens/ReviewDetails';
+import About from '../screens/About';
 import Header from '../shared/Header';
 
 const Stack = createStackNavigator();
 
-export default function HomeStack() {
+export default function AboutStack() {
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
           backgroundColor: '#171A21',
         },
-        headerTitleAlign: 'center',
         headerTintColor: '#fff',
       }}
     >
       <Stack.Screen
-        name='Home'
-        component={Home}
+        name='About'
+        component={About}
         options={({ navigation }) => {
           return {
             headerTitle: () => (
               <Header
                 navigation={navigation}
-                title='SteamZone'
+                title='About'
               />
             ),
           };
-        }}
-      />
-      <Stack.Screen
-        name='ReviewDetails'
-        component={ReviewDetails}
-        options={{
-          title: 'Details',
         }}
       />
     </Stack.Navigator>
