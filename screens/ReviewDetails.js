@@ -18,9 +18,11 @@ export default function ReviewDetails({ route }) {
     <View style={globalStyles.container}>
       <Card>
         <Text style={styles.title}>{title}</Text>
-        <Text style={styles.content}>{body}</Text>
+        <Text style={globalStyles.paragraph}>
+          {body}
+        </Text>
         <View style={styles.rating}>
-          <Text style={styles.content}>
+          <Text style={globalStyles.paragraph}>
             SteamZone rating :{' '}
           </Text>
           <Image source={images.ratings[rating]} />
@@ -35,11 +37,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: '#fff',
     marginVertical: 16,
-  },
-  content: {
-    fontSize: 16,
-    color: '#BFBDBB',
-    lineHeight: 30,
   },
   rating: {
     flexDirection: 'row',

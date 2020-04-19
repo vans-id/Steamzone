@@ -8,12 +8,13 @@ export const globalStyles = StyleSheet.create({
   },
   titleText: {
     fontFamily: 'nunito-bold',
-    fontSize: 16,
+    fontSize: 18,
     color: '#58C0F4',
   },
   paragraph: {
+    fontSize: 16,
     marginVertical: 8,
-    lineHeight: 20,
+    lineHeight: 30,
     color: '#BFBDBB',
   },
   input: {
@@ -23,7 +24,12 @@ export const globalStyles = StyleSheet.create({
     padding: 10,
     fontSize: 18,
     borderRadius: 6,
-    marginBottom: 16,
+  },
+  errorText: {
+    color: '#ff8a80',
+    marginBottom: 10,
+    marginTop: 6,
+    marginLeft: 6,
   },
 });
 
